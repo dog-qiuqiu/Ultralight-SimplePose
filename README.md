@@ -11,17 +11,6 @@
 # Ncnn deploy
 * zzzz
 # Thanks
+* SimplePose Paper:https://arxiv.org/abs/1804.06208
 * https://github.com/Tencent/ncnn
 * https://gluon-cv.mxnet.io/
-## Citation
-
-Please kindly cite this paper in your publications if it helps your research.
-
-```
-@article{li2019simple,
-  title={Simple Pose: Rethinking and Improving a Bottom-up Approach for Multi-Person Pose Estimation},
-  author={Li, Jia and Su, Wen and Wang, Zengfu},
-  journal={arXiv preprint arXiv:1911.10529},
-  year={2019}
-}
-```
