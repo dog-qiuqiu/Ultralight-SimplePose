@@ -3,7 +3,10 @@
 * Lightweight mobile terminal human body posture key point model(COCO 17 person_keypoints)
 * Support NCNN mobile terminal deployment
 # Model 
-* zzzz
+#### Mobile inference frameworks benchmark (4*ARM_CPU)
+Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
+:---:|:---:|:---:|:---:|:---:|:---:
+MobileNetV2-0.5-SimplePose|&|w:192 h:256|6.7ms|&BFlops|2.9MB
 # Demo
 * zzzz
 # How train
