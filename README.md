@@ -11,7 +11,8 @@
 # Ncnn deploy
 * zzzz
 # Thanks
-* 
+* https://github.com/Tencent/ncnn
+* https://gluon-cv.mxnet.io/
 ## Citation
 
 Please kindly cite this paper in your publications if it helps your research.
