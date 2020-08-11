@@ -1,4 +1,4 @@
-# MobileNetV2-SimplePose
+# Ultralight-SimplePose
 * Based on MXNET(>=1.5.1) GLUON(>=0.7.0) framework
 * Lightweight mobile terminal human body posture key point model(COCO 17 person_keypoints)
 * Support NCNN mobile terminal deployment
