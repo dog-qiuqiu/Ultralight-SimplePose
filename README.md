@@ -1,18 +1,18 @@
 # Ultralight-SimplePose
-* Based on MXNET(>=1.5.1) GLUON(>=0.7.0) framework
-* Lightweight mobile terminal human body posture key point model(COCO 17 person_keypoints)
 * Support NCNN mobile terminal deployment
+* Based on MXNET(>=1.5.1) GLUON(>=0.7.0) framework
 * Top-down strategy: The input image is the person ROI detected by the object detector
+* Lightweight mobile terminal human body posture key point model(COCO 17 person_keypoints)
 # Model 
 #### Mobile inference frameworks benchmark (4*ARM_CPU)
 Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
 :---:|:---:|:---:|:---:|:---:|:---:
-MobileNetV2-0.5-SimplePose|&|W:192 H:256|&ms|&BFlops|&MB
+MobileNetV2-0.5-SimplePose|&%|W:192 H:256|&ms|&BFlops|&MB
 # Demo
 * zzzz
-# How train
+# How To Train
 * zzz
-# Ncnn deploy
+# Ncnn Deploy
 * zzzz
 # Thanks
 * SimplePose Paper:https://arxiv.org/abs/1804.06208
