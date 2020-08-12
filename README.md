@@ -13,7 +13,11 @@ Ultralight-Nano-SimplePose|71.0%|W:192 H:256|~5.4ms|&BFlops|2.3MB
 # Demo
 * zzzz
 # How To Train
-* zzz
+## Download the coco2017 dataset
+* http://images.cocodataset.org/zips/train2017.zip
+* http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+* http://images.cocodataset.org/zips/val2017.zip
+* Unzip the downloaded dataset zip file to the coco directory
 # Ncnn Deploy
 * zzzz
 # Thanks
