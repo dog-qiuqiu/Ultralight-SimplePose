@@ -10,7 +10,7 @@
 #### Mobile inference frameworks benchmark (4*ARM_CPU)
 Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
 :---:|:---:|:---:|:---:|:---:|:---:
-Ultralight-Nano-SimplePose|71.0%|W:192 H:256|~5.4ms|&BFlops|2.3MB
+[Ultralight-Nano-SimplePose](https://github.com/dog-qiuqiu/Ultralight-SimplePose/tree/master/model)|71.0%|W:192 H:256|~5.4ms|&BFlops|2.3MB
 # Demo
 * zzzz
 # How To Train
