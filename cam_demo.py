@@ -28,7 +28,7 @@ def keypoint_detection(img, detector, pose_net, ctx):
 
         scale = 1.0 * img.shape[0] / scaled_img.shape[0]
         img = cv_plot_keypoints(img.asnumpy(), pred_coords, confidence, class_IDs, bounding_boxs, scores,
-                                box_thresh=1, keypoint_thresh=0.1, scale=scale)
+                                box_thresh=0.5, keypoint_thresh=0.3, scale=scale)
     return img
 
 if __name__ == '__main__':
