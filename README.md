@@ -5,6 +5,7 @@
 * Based on MXNET(>=1.5.1) GLUON(>=0.7.0) framework
 * Top-down strategy: The input image is the person ROI detected by the object detector
 * Lightweight mobile terminal human body posture key point model(COCO 17 person_keypoints)
+* Detector:https://github.com/dog-qiuqiu/MobileNetv2-YOLOV3
 # Model 
 #### Mobile inference frameworks benchmark (4*ARM_CPU)
 Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
