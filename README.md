@@ -1,4 +1,6 @@
 # Ultralight-SimplePose
+![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/demo.gif)
+
 * Support NCNN mobile terminal deployment
 * Based on MXNET(>=1.5.1) GLUON(>=0.7.0) framework
 * Top-down strategy: The input image is the person ROI detected by the object detector
