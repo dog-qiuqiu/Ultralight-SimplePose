@@ -60,8 +60,8 @@ if __name__ == '__main__':
     img_path = "test.jpg"
     IMG_W, IMG_H = 192, 256
     context = mx.gpu(0)
-    json_path = 'Ultralight-Nano-SimplePose.json'
-    params_path = "Ultralight-Nano-SimplePose.params"
+    json_path = 'model/Ultralight-Nano-SimplePose.json'
+    params_path = "model/Ultralight-Nano-SimplePose.params"
 
     net = gluon.SymbolBlock.imports(json_path, ['data'], params_path)
     net.collect_params().reset_ctx(ctx = context)
