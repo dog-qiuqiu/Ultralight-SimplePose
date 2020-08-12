@@ -32,8 +32,8 @@ def keypoint_detection(img, detector, pose_net, ctx):
     return img
 
 if __name__ == '__main__':
-    json_path = "MobileNetv2_simplepose_0.70438-symbol.json"
-    params_path = "MobileNetv2_simplepose_0.70438-0100.params"
+    json_path = "Ultralight-Nano-SimplePose.json"
+    params_path = "Ultralight-Nano-SimplePose.params"
     
     ctx = mx.gpu(0)
     detector_name = "yolo3_mobilenet1.0_coco"
