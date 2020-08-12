@@ -16,7 +16,7 @@ Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight siz
 ```
 python img_demo.py
 ```
-![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/Figure_1-1.png)
+![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/Figure_1-1.jpg)
 # How To Train
 ### Download the coco2017 dataset
 * http://images.cocodataset.org/zips/train2017.zip
