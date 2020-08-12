@@ -81,7 +81,7 @@ def train():
     lr_steps = [90,120,140]
 
     #指定训练的GPU
-    num_workers=128 #占用内存64gb 值越大数据读取越快但内存占用越多
+    num_workers=2 #值越大数据读取越快但内存占用越多
     context = mx.gpu(0)
 
     #响应点回归采用L2loss
