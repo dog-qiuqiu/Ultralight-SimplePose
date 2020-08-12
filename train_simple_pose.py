@@ -78,7 +78,7 @@ def train():
     lr = 0.001
     lr_factor = 0.1
     EPOCH = 140
-    lr_steps = [90,120]
+    lr_steps = [90,120,140]
 
     #指定训练的GPU
     num_workers=128 #占用内存64gb 值越大数据读取越快但内存占用越多
