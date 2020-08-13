@@ -27,6 +27,7 @@ python cam_demo
 * http://images.cocodataset.org/annotations/annotations_trainval2017.zip
 * http://images.cocodataset.org/zips/val2017.zip
 * Unzip the downloaded dataset zip file to the coco directory
+* 交流qq群:1062122604
 ### Train
 ```
 python train_simple_pose.py
