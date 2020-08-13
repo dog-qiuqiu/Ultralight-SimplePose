@@ -11,7 +11,7 @@
 Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
 :---:|:---:|:---:|:---:|:---:|:---:
 [Ultralight-Nano-SimplePose](https://github.com/dog-qiuqiu/Ultralight-SimplePose/tree/master/model)|71.0%|W:192 H:256|~5.4ms|&BFlops|2.3MB
-# pip Requirement
+# Install
 ```
 pip install mxnet-cu101 gluoncv
 pip install opencv-python cython pycocotools
