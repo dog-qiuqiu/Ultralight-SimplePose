@@ -57,6 +57,8 @@ $ cp -rf ncnn/build/install/lib ./Ultralight-SimplePose/ncnnsample/
 $ g++ -o ncnnpose ncnnpose.cpp -I include/ncnn/ lib/libncnn.a `pkg-config --libs --cflags opencv` -fopenmp
 $ ./ncnnpose
 ```
+## Ncnn Picture test results
+![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/ncnndemo.png)
 # Thanks
 * SimplePose Paper:https://arxiv.org/abs/1804.06208
 * https://github.com/Tencent/ncnn
