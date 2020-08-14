@@ -115,12 +115,24 @@ int demo(cv::Mat& image, ncnn::Net &detectornet, int detector_size_width, int de
     {
         printf("==================================\n");
         float x1, y1, x2, y2, score, label;
+        float pw,ph,cx,cy;
         const float* values = out.row(i);
         
         x1 = values[2] * img_w;
         y1 = values[3] * img_h;
         x2 = values[4] * img_w;
         y2 = values[5] * img_h;
+
+        pw = x2-x1;
+        ph = y2-y1;
+        cx = x1+0.5*pw;
+        cy = y1+0.5*ph;
+
+        x1 = cx - 0.7*pw;
+        y1 = cy - 0.6*ph;
+        x2 = cx + 0.7*pw;
+        y2 = cy + 0.6*ph;
+
         score = values[1];
         label = values[0];
 
