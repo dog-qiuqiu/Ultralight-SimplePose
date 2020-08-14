@@ -133,10 +133,7 @@ int demo(cv::Mat& image, ncnn::Net &detectornet, int detector_size_width, int de
         runpose(roi, posenet, pose_size_width, pose_size_height,keypoints, x1, y1);
         draw_pose(image, keypoints);
         cv::rectangle (image, cv::Point(x1, y1), cv::Point(x2, y2), cv::Scalar(255, 0, 255), 2, 8, 0);
-        break;
     }
-    cv::imshow("image", image);
-    cv::waitKey(0);
     return 0;
 }
 
@@ -161,7 +158,7 @@ int main()
     int pose_size_height =  256;
     
     demo(img, detectornet, detector_size_width, detector_size_height, posenet, pose_size_width,pose_size_height);
-    // cv::imshow("demo", img);
-    // cv::waitKey(0);
+    cv::imshow("demo", img);
+    cv::waitKey(0);
     return 0;
 }
