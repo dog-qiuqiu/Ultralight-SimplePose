@@ -39,7 +39,7 @@ static void draw_pose(const cv::Mat& image, const std::vector<KeyPoint>& keypoin
     }
 }
 
-int runpose(cv::Mat& roi, ncnn::Net posenet, int pose_size_width, int pose_size_height, std::vector<KeyPoint>& keypoints,float x1, float y1)
+int runpose(cv::Mat& roi, ncnn::Net &posenet, int pose_size_width, int pose_size_height, std::vector<KeyPoint>& keypoints,float x1, float y1)
 {
     int w = roi.cols;
     int h = roi.rows;
@@ -87,8 +87,8 @@ int runpose(cv::Mat& roi, ncnn::Net posenet, int pose_size_width, int pose_size_
 }
 
 
-int demo(cv::Mat& image, ncnn::Net detectornet, int detector_size_width, int detector_size_height, \
-         ncnn::Net posenet, int pose_size_width, int pose_size_height)
+int demo(cv::Mat& image, ncnn::Net &detectornet, int detector_size_width, int detector_size_height, \
+         ncnn::Net &posenet, int pose_size_width, int pose_size_height)
 {
     cv::Mat bgr = image.clone();
     int img_w = bgr.cols;
@@ -160,7 +160,7 @@ int main()
     int pose_size_width  =  192;
     int pose_size_height =  256;
     
-    demo(img, detectornet, pose_size_width, pose_size_height, posenet, pose_size_width,pose_size_height);
+    demo(img, detectornet, detector_size_width, detector_size_height, posenet, pose_size_width,pose_size_height);
     // cv::imshow("demo", img);
     // cv::waitKey(0);
     return 0;
