@@ -1,5 +1,8 @@
+#include "benchmark.h"
+#include "cpu.h"
+#include "datareader.h"
 #include "net.h"
-#include "platform.h"
+#include "gpu.h"
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -32,7 +35,7 @@ static void draw_pose(const cv::Mat& image, const std::vector<KeyPoint>& keypoin
     for (size_t i = 0; i < keypoints.size(); i++)
     {
         const KeyPoint& keypoint = keypoints[i];
-        fprintf(stderr, "%.2f %.2f = %.5f\n", keypoint.p.x, keypoint.p.y, keypoint.prob);
+        //fprintf(stderr, "%.2f %.2f = %.5f\n", keypoint.p.x, keypoint.p.y, keypoint.prob);
         if (keypoint.prob < 0.2f)
             continue;
         cv::circle(image, keypoint.p, 3, cv::Scalar(0, 255, 0), -1);
@@ -126,7 +129,13 @@ int demo(cv::Mat& image, ncnn::Net &detectornet, int detector_size_width, int de
         if(y1<0) y1=0;
         if(x2<0) x2=0;
         if(y2<0) y2=0;
+
+        if(x1>img_w) x1=img_w;
+        if(y1>img_h) y1=img_h;
+        if(x2>img_w) x2=img_w;
+        if(y2>img_h) y2=img_h;
         //截取人体ROI
+        //printf("x1:%f y1:%f x2:%f y2:%f\n",x1,y1,x2,y2);
         cv::Mat roi;
         roi = bgr(cv::Rect(x1, y1, x2-x1, y2-y1)).clone();
         std::vector<KeyPoint> keypoints;
@@ -137,8 +146,8 @@ int demo(cv::Mat& image, ncnn::Net &detectornet, int detector_size_width, int de
     return 0;
 }
 
-
-int main()
+//图片测试
+int test_img()
 {
     cv::Mat img;
     img = cv::imread("test.jpg");
@@ -160,5 +169,46 @@ int main()
     demo(img, detectornet, detector_size_width, detector_size_height, posenet, pose_size_width,pose_size_height);
     cv::imshow("demo", img);
     cv::waitKey(0);
+    return 0;
+}
+
+//摄像头测试
+int test_cam()
+{
+    //定义检测器
+    ncnn::Net detectornet;  
+    detectornet.load_param("ncnnmodel/person_detector.param");
+    detectornet.load_model("ncnnmodel/person_detector.bin");
+    int detector_size_width  =  320;
+    int detector_size_height = 320;
+
+    //定义人体姿态关键点预测器
+    ncnn::Net posenet;  
+    posenet.load_param("ncnnmodel/Ultralight-Nano-SimplePose.param");
+    posenet.load_model("ncnnmodel/Ultralight-Nano-SimplePose.bin");
+    int pose_size_width  =  192;
+    int pose_size_height =  256;
+
+    cv::Mat frame;
+    cv::VideoCapture cap(0);
+
+    while (true)
+    {
+        cap >> frame;
+        double start = ncnn::get_current_time();
+        demo(frame, detectornet, detector_size_width, detector_size_height, posenet, pose_size_width,pose_size_height);
+        double end = ncnn::get_current_time();
+        double time = end - start;
+        printf("Time:%7.2f \n",time);
+        cv::imshow("demo", frame);
+        cv::waitKey(1);
+    }
+    return 0;
+}
+
+int main()
+{
+    //test_img();
+    test_cam();
     return 0;
 }
