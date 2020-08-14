@@ -39,7 +39,16 @@ python cam_demo
 python train_simple_pose.py
 ```
 # Ncnn Deploy
-* zzzz
+* Dependent library: Opencv Ncnn
+## Install ncnn
+```
+$ git clone https://github.com/Tencent/ncnn.git
+$ cd <ncnn-root-dir>
+$ mkdir -p build
+$ cd build
+$ make -j4
+$ make install
+```
 # Thanks
 * SimplePose Paper:https://arxiv.org/abs/1804.06208
 * https://github.com/Tencent/ncnn
