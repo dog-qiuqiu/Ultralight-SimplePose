@@ -49,6 +49,13 @@ $ cd build
 $ make -j4
 $ make install
 ```
+## Run ncnn sample
+```
+$ cp -rf ncnn/build/install/include ./Ultralight-SimplePose/ncnnsample/
+$ cp -rf ncnn/build/install/lib ./Ultralight-SimplePose/ncnnsample/
+$ g++ -o ncnnpose ncnnpose.cpp -I include/ncnn/ lib/libncnn.a `pkg-config --libs --cflags opencv` -fopenmp
+$ ./ncnnpose
+```
 # Thanks
 * SimplePose Paper:https://arxiv.org/abs/1804.06208
 * https://github.com/Tencent/ncnn
