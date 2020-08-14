@@ -39,7 +39,7 @@ def data_loader(PATH, BATCH_SIZE, IMG_W, IMG_H, HEATMAP_W, HEATMAP_H, num_worker
     transform_val = SimplePoseDefaultTrainTransform(num_joints=val_dataset.num_joints,
                                                       joint_pairs=val_dataset.joint_pairs,
                                                       image_size=(IMG_H, IMG_W), heatmap_size=(HEATMAP_H, HEATMAP_W),
-                                                      scale_factor=0.30, rotation_factor=40, random_flip=True)
+                                                      scale_factor=0, rotation_factor=0, random_flip=False)
     train_data = gluon.data.DataLoader(
         train_dataset.transform(transform_train),
         batch_size=BATCH_SIZE, shuffle=True, last_batch='discard', num_workers= num_workers)
