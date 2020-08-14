@@ -40,6 +40,7 @@ python train_simple_pose.py
 ```
 # Ncnn Deploy
 * Dependent library: Opencv Ncnn
+* Read the camera video stream test by default, if you test the picture, please modify the code
 ## Install ncnn
 ```
 $ git clone https://github.com/Tencent/ncnn.git
