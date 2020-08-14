@@ -8,9 +8,22 @@
 * Detector:https://github.com/dog-qiuqiu/MobileNetv2-YOLOV3
 # Model 
 #### Mobile inference frameworks benchmark (4*ARM_CPU)
-Network|COCO AP(0.5)|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
+Network|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
 :---:|:---:|:---:|:---:|:---:|:---:
-[Ultralight-Nano-SimplePose](https://github.com/dog-qiuqiu/Ultralight-SimplePose/tree/master/model)|71.0%|W:192 H:256|~5.4ms|&BFlops|2.3MB
+[Ultralight-Nano-SimplePose](https://github.com/dog-qiuqiu/Ultralight-SimplePose/tree/master/model)|W:192 H:256|~5.4ms|&BFlops|2.3MB
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets= 20 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets= 20 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets= 20 ] = 0.558
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets= 20 ] = 0.498
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets= 20 ] = 0.549
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 20 ] = 0.563
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets= 20 ] = 0.837
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets= 20 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets= 20 ] = 0.535
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets= 20 ] = 0.604
+
+```
 # Install
 ```
 pip install mxnet-cu101 gluoncv
