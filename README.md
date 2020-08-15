@@ -8,9 +8,9 @@
 * Detector:https://github.com/dog-qiuqiu/MobileNetv2-YOLOV3
 # Model 
 #### Mobile inference frameworks benchmark (4*ARM_CPU)
-Network|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size
-:---:|:---:|:---:|:---:|:---:
-[Ultralight-Nano-SimplePose](https://github.com/dog-qiuqiu/Ultralight-SimplePose/tree/master/model)|W:192 H:256|~5.4ms|0.224BFlops|2.3MB
+Network|Resolution|Inference time (NCNN/Kirin 990)|FLOPS|Weight size|HeatmapAccuracy
+:---:|:---:|:---:|:---:|:---:|:---:
+[Ultralight-Nano-SimplePose](https://github.com/dog-qiuqiu/Ultralight-SimplePose/tree/master/model)|W:192 H:256|~5.4ms|0.224BFlops|2.3MB|74.3%
 ### COCO2017 val keypoints metrics evaluate
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets= 20 ] = 0.518
