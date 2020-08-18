@@ -72,9 +72,9 @@ $ g++ -o ncnnpose ncnnpose.cpp -I include/ncnn/ lib/libncnn.a `pkg-config --libs
 $ ./ncnnpose
 ```
 ## Ncnn Picture test results
-![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/ncnndemo.png)
+![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/ncnndemo.png)                    
 ## Android sample
-![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/Android_Meizu16x_simple_pose.jpg)
+<img src="https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/Android_Meizu16x_simple_pose.jpg" width="330" height="660" /><br/>
 * https://github.com/WZTENG/YOLOv5_NCNN
 # Thanks
 * SimplePose Paper:https://arxiv.org/abs/1804.06208
