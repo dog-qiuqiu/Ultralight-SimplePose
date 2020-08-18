@@ -71,6 +71,9 @@ $ cp -rf ncnn/build/install/lib ./Ultralight-SimplePose/ncnnsample/
 $ g++ -o ncnnpose ncnnpose.cpp -I include/ncnn/ lib/libncnn.a `pkg-config --libs --cflags opencv` -fopenmp
 $ ./ncnnpose
 ```
+## Android sample
+![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/Android_Meizu16x_simple_pose.jpg)
+* https://github.com/WZTENG/YOLOv5_NCNN
 ## Ncnn Picture test results
 ![image](https://github.com/dog-qiuqiu/Ultralight-SimplePose/blob/master/data/ncnndemo.png)
 # Thanks
