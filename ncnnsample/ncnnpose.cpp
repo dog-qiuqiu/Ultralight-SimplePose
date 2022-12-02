@@ -149,7 +149,7 @@ int demo(cv::Mat& image, ncnn::Net &detectornet, int detector_size_width, int de
         //截取人体ROI
         //printf("x1:%f y1:%f x2:%f y2:%f\n",x1,y1,x2,y2);
         cv::Mat roi;
-        roi = bgr(cv::Rect(x1, y1, x2-x1, y2-y1)).clone();
+        roi = bgr.clone()(cv::Rect(x1, y1, x2-x1, y2-y1));
         std::vector<KeyPoint> keypoints;
         runpose(roi, posenet, pose_size_width, pose_size_height,keypoints, x1, y1);
         draw_pose(image, keypoints);
